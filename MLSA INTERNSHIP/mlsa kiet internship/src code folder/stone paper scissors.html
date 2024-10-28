@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stone : paper : scissors</title>
+    <link rel="stylesheet" href="stone paper scissor css.css">
+</head>
+<body>
+    <H1>WeLcOmE!</H1>
+    <div>Stone : Paper : Scissors</div>
+    <div>U know the rules so get started:)</div>
+    <button id="paper" onclick="user='paper';document.getElementById('checker').innerText='You cHose::'+user;document.getElementById('check').innerText='ComPuTeR cHose::'+computer_choice();document.getElementById('result').innerText=decisive();document.getElementById('score').innerText=JSON.stringify(scorerecorder());">
+        <label for="paper">PaPer</label>
+    </button>
+    
+
+    <button id="stone" onclick="user='stone';document.getElementById('checker').innerText='You cHose::'+user;document.getElementById('check').innerText='ComPuTeR cHose::'+computer_choice();document.getElementById('result').innerText=decisive();document.getElementById('score').innerText=JSON.stringify(scorerecorder());">
+        <label for="stone">sToNe</label>   
+    </button>
+    
+
+    <button id="scissors" onclick="user='scissors';document.getElementById('checker').innerText='You cHose::'+user;document.getElementById('check').innerText='ComPuTeR cHose::'+computer_choice();document.getElementById('result').innerText=decisive();document.getElementById('score').innerText=JSON.stringify(scorerecorder());">
+        <label for="scissors">SciSsORs</label> 
+    </button>
+    <p id="result">Your DesTiny wIlL BE hErE!!</p>
+    <div id="checker"></div>
+    <div id="check"></div>
+    <div id="score"></div>
+    <button id="refresh" onclick="localStorage.clear();score={
+        win:0,loss:0,tie:0,
+    };document.getElementById('result').innerText='New sTarT';document.getElementById('score').innerText='';document.getElementById('score').innerText='';document.getElementById('checker').innerText='';document.getElementById('check').innerText='';">refresh</button>
+
+    <script>
+        let user='';
+        let compchoice='';
+        function computer_choice(){
+            let comprange=Math.random()*3;
+            compchoice='';
+            if(comprange>0 && comprange<=1){
+                compchoice='stone';
+            }
+            else if(comprange>1 && comprange<=2){
+                compchoice='paper';
+            }
+            else{
+                compchoice='scissors';
+            }
+
+            return compchoice;
+        }
+        
+        function decisive(){
+            if(user==compchoice ){
+                return 'Tie';
+            }
+            else if(user=='paper' && compchoice=='scissors'){
+                return 'Lose';
+            }
+            else if(user=='paper' && compchoice=='stone'){
+                return 'Win';
+            }
+            else if(user=='stone' && compchoice=='scissors'){
+                return 'Win';
+            }
+            else if(user=='stone' && compchoice=='paper'){
+                return 'Lose';
+            }
+            else if(user=='scissors'&& compchoice=='paper'){
+                return 'Win';
+            }
+            else if(user=='scissors' && compchoice=='stone'){
+                return 'Lose';
+            }
+        }
+        let score;
+        let scorestr=localStorage.getItem('score');
+        if (scorestr){
+            score=JSON.parse(scorestr);
+        }
+        else{
+            score={
+                win:0,loss:0,tie:0,
+
+            }
+        }
+        function scorerecorder(){
+            if (decisive()=='Win'){
+                score.win+=1;
+            }
+            else if(decisive()=='Lose'){
+                score.loss+=1;
+            }
+            else{
+                score.tie+=1;
+            }
+            localStorage.setItem('score',JSON.stringify(score));
+            return score;
+
+        }
+
+    </script>
+</body>
+</html>

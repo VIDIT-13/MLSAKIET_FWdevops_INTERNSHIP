@@ -1,0 +1,290 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    filter: brightness(100%);
+    background-image: url(netflix-background-image.jpg);
+    width: 100vw;
+    height: 80vh;
+}
+
+select{
+    font-family: poppins;
+    text-align: center;
+    background-color: darkred;
+    color: white;
+    position:absolute;
+    right: 10px;
+    top: 5vh;
+    border-radius: 30px;
+    height: 30px;
+    width: 100px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+    letter-spacing: 1px;
+    border-width: 3px;
+    border-color: black;
+}
+#container{
+    margin-top: 20vh;
+
+    text-align: center;
+}
+#line1{
+    line-height: 100px;
+    letter-spacing: 1px;
+    font-size: 50px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 500;
+    color:white;
+
+}
+#line2{
+    line-height: 100px;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 300;
+    color:white;
+}
+#line3
+{   line-height: 80px;
+    letter-spacing: 1px;
+    font-size: 30px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 300;
+    color:white;
+}
+#input{
+    text-align: center;
+}
+input{
+    text-align: left;
+    width: 30vw;
+    height: 5vh;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+
+}
+button{
+    font-family: poppins;
+    border-radius: 10px;
+    width: 10vw;
+    height: 5vh;
+    background-color: red;
+    color: white;
+    transition-duration: 2s;
+}
+button:hover{
+    
+    color: red;
+    background-color: antiquewhite;
+    font-weight: 300;
+}
+
+.sections{
+    background-color: black;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+#sec1{
+    border-top: 4px solid crimson;
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 4px solid rgba(255,255, 255, 0.4) ;
+    
+}
+#sec2{
+    
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 4px solid ;
+    border-color: rgba(255,255, 255, 0.4);
+}
+.backgrounds{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    border: 4px groove white;  
+    animation-name: changer;  
+    background-size: cover;
+    animation-duration: 12s; /* Total time for 4 images (3s each) */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+video{
+    width: 400px;
+    height: 200px;
+    border:  4px solid crimson;
+}
+
+@keyframes changer {
+    0% {
+        background-image: url('ek villain.jfif');
+    }
+    25% {
+        background-image: url('money heist.jfif');
+    }
+    50% {
+        background-image: url('squid game.jfif');
+    }
+    75% {
+        background-image: url('alive.jfif');
+    }
+    100% {
+        background-image: url('ek villain.jfif'); /* Loop back to the first image */
+    }
+}
+
+
+#sec3{
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 4px solid ;
+    border-color: rgba(255,255, 255, 0.4);
+
+}
+#sec4{
+    color: white;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    border-bottom: 4px solid ;
+    border-color: rgba(255,255, 255, 0.4);
+
+
+}
+.line{
+    font-family: poppins;
+    font-weight: 700;
+    letter-spacing:1px;
+    font-size: 25px;
+
+}
+.content{
+    font-family: poppins;
+    font-size: 15px;
+    font-weight: 200;
+}
+#content2{
+    width: 500px;
+}
+#content4{
+    width: 500px;
+}
+.imgs{
+    width: 400px;
+    height: 200px;
+    border: 4px groove darkred;
+    
+}
+#img4{
+    border: 4px groove white;
+}
+#faq{
+    padding-top: 50px;
+    text-align: center;
+    background-color: black;
+}
+#faqmini{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-family: poppins;
+    font-weight: 900;
+    letter-spacing: 1px;
+
+}
+#papablock{
+    text-align: center;
+}
+.blocks{
+display: flex;
+justify-content: space-between;
+align-items: center;
+    font-family: poppins;
+    font-size: x-large;
+    font-weight: 500;
+    text-align: left;
+    background-color: darkred;
+    color: white;
+    width: 70vw;
+    height: 60px;
+    margin-bottom: 5px;
+    margin-left: 200px;
+    transition-duration: 2s;
+    padding-bottom: 10px;
+
+
+}
+a:link{
+    color: white;
+    font-family: poppins;
+    font-size: x-large;
+    
+}
+.blocks:hover{
+    background-color: white;
+    color: red;
+}
+#lastblock{
+    margin-bottom: 10px;
+}
+.blocks:active{
+    background-color: chartreuse;
+}
+span{
+    height: 30px;
+    width: 30px;
+}
+
+#papacontainer{
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-color: black;
+    color: antiquewhite;
+    text-decoration: none;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+#footerlasso{
+    background-color: black;
+    text-align: center;
+}
+.backgrounds2{
+    width: 400px;
+    height: 200px;
+    position: relative;
+    border: 4px groove crimson;  
+    animation-name: changer2;  
+    background-size: cover;
+    animation-duration: 12s; /* Total time for 4 images (3s each) */
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+@keyframes changer2 {
+    0% {
+        background-image: url('blackps5.jfif');
+    }
+    25% {
+        background-image: url('blacktv.jfif');
+    }
+    50% {
+        background-image: url('blackxbox.jfif');
+    }
+    75% {
+        background-image: url('blacktv.jfif');
+    }
+    100% {
+        background-image: url('blackps5.jfif'); /* Loop back to the first image */
+    }
+}

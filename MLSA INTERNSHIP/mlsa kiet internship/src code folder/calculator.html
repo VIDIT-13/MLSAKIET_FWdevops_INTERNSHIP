@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    
+    <div id="calculator">
+        <input type="text" placeholder="CALCULATOR" id="field">
+        <div id="line1"><button id="clear" onclick="currentdisplay=' '; document.getElementById('field').value=currentdisplay">C</button>
+        <button id="one" onclick="currentdisplay+=1;document.getElementById('field').value=currentdisplay;">1</button>
+        <button id="two" onclick="currentdisplay+=2;document.getElementById('field').value=currentdisplay;">2</button></div>
+
+        <div id="line2"><button id="plus" onclick="currentdisplay+=`+`;document.getElementById('field').value=currentdisplay;">+</button>
+        <button id="three" onclick="currentdisplay+=3;document.getElementById('field').value=currentdisplay;">3</button>
+        <button id="four" onclick="currentdisplay+=4;document.getElementById('field').value=currentdisplay;">4</button></div>
+
+        <div id="line3"><button id="minus" onclick="currentdisplay+=`-`;document.getElementById('field').value=currentdisplay;">-</button>
+        <button id="five" onclick="currentdisplay+=5;document.getElementById('field').value=currentdisplay;">5</button>
+        <button id="six" onclick="currentdisplay+=6;document.getElementById('field').value=currentdisplay;">6</button></div>
+
+        <div id="line4"><button id="multiply" onclick="currentdisplay+=`*`;document.getElementById('field').value=currentdisplay;">*</button>
+        <button id="seven" onclick="currentdisplay+=7;document.getElementById('field').value=currentdisplay;">7</button>
+        <button id="eight" onclick="currentdisplay+=8;document.getElementById('field').value=currentdisplay;">8</button></div>
+
+        <div id="line5"><button id="divide" onclick="currentdisplay=currentdisplay+`/`;document.getElementById('field').value=currentdisplay;">/</button>
+        <button id="nine" onclick="currentdisplay+=9;document.getElementById('field').value=currentdisplay;">9</button>
+        <button id="zero" onclick="currentdisplay+=0;document.getElementById('field').value=currentdisplay;">0</button></div>
+
+        <div id="line6"><button id="decimalpoint" onclick="currentdisplay+=`.`;document.getElementById('field').value=currentdisplay;">.</button>
+        <button id="equal" onclick="let result=eval(currentdisplay);document.getElementById('field').value=result">=</button></div>
+
+
+    
+    <div id="modes"><button id="dark">DARK</button><button id="light">LIGHT</button></div>
+</div>
+<script>
+    let currentdisplay='';
+    document.getElementById('field').value=currentdisplay;
+</script>
+</body>
+</html>
